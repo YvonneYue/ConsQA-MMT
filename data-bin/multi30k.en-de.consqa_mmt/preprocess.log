@@ -1,0 +1,40 @@
+Namespace(aim_repo=None, aim_run_hash=None, align_suffix=None, alignfile=None, all_gather_list_size=16384, amp=False, amp_batch_retries=2, amp_init_scale=128, amp_scale_window=None, ans=None, azureml_logging=False, bf16=False, bpe=None, cpu=False, criterion='cross_entropy', dataset_impl='mmap', destdir='data-bin/multi30k.en-de.consqa_mmt', dict_only=False, empty_cache_freq=0, fp16=False, fp16_init_scale=128, fp16_no_flatten_grads=False, fp16_scale_tolerance=0.0, fp16_scale_window=None, joined_dictionary=True, log_file=None, log_format=None, log_interval=100, lr_scheduler='fixed', memory_efficient_bf16=False, memory_efficient_fp16=False, min_loss_scale=0.0001, model_parallel_size=1, no_progress_bar=False, nwordssrc=-1, nwordstgt=-1, on_cpu_convert_precision=False, only_source=False, optimizer=None, padding_factor=8, plasma_path='/tmp/plasma', profile=False, quantization_config_path=None, query=None, reset_logging=False, scoring='bleu', seed=1, source_lang='en', srcans='data/consqa-m30k-en2de/train_en', srcdict=None, srcgptans='data/consqa-m30k-en2de/gpt_train_en', srcgptquery='data/consqa-m30k-en2de/gpt_train_en', srcquery='data/consqa-m30k-en2de/train_en', suppress_crashes=False, target_lang='de', task='consqa_mmt', tensorboard_logdir=None, testpref='data/consqa-m30k-en2de/test.2016,data/consqa-m30k-en2de/test.2017,data/consqa-m30k-en2de/test.coco,data/consqa-m30k-en2de/test.2018', tgtans='data/consqa-m30k-en2de/train_de', tgtdict=None, tgtquery='data/consqa-m30k-en2de/train_de', threshold_loss_scale=None, thresholdsrc=0, thresholdtgt=0, tokenizer=None, tpu=False, trainpref='data/consqa-m30k-en2de/train', use_plasma_view=False, user_dir=None, validpref='data/consqa-m30k-en2de/valid', wandb_project=None, workers=4)
+[en] Dictionary: 9760 types
+[en] data/consqa-m30k-en2de/train.en: 29000 sents, 426631 tokens, 0.0% replaced (by <unk>)
+[en] Dictionary: 9760 types
+[en] data/consqa-m30k-en2de/valid.en: 1014 sents, 15153 tokens, 0.0198% replaced (by <unk>)
+[en] Dictionary: 9760 types
+[en] data/consqa-m30k-en2de/test.2016.en: 1000 sents, 14671 tokens, 0.00682% replaced (by <unk>)
+[en] Dictionary: 9760 types
+[en] data/consqa-m30k-en2de/test.2017.en: 1000 sents, 13183 tokens, 0.0303% replaced (by <unk>)
+[en] Dictionary: 9760 types
+[en] data/consqa-m30k-en2de/test.coco.en: 461 sents, 6034 tokens, 0.0% replaced (by <unk>)
+[en] Dictionary: 9760 types
+[en] data/consqa-m30k-en2de/test.2018.en: 1071 sents, 16725 tokens, 0.0239% replaced (by <unk>)
+[query] Dictionary: 9760 types
+[query] data/consqa-m30k-en2de/train_en.query: 29000 sents, 250823 tokens, 0.0% replaced (by <unk>)
+[ans] Dictionary: 9760 types
+[ans] data/consqa-m30k-en2de/train_en.ans: 29000 sents, 99789 tokens, 0.0% replaced (by <unk>)
+[query] Dictionary: 9760 types
+[query] data/consqa-m30k-en2de/train_de.query: 29000 sents, 236153 tokens, 0.0% replaced (by <unk>)
+[ans] Dictionary: 9760 types
+[ans] data/consqa-m30k-en2de/train_de.ans: 29000 sents, 100953 tokens, 0.0% replaced (by <unk>)
+[query] Dictionary: 9760 types
+[query] data/consqa-m30k-en2de/gpt_train_en.query: 29000 sents, 369329 tokens, 0.0% replaced (by <unk>)
+[ans] Dictionary: 9760 types
+[ans] data/consqa-m30k-en2de/gpt_train_en.ans: 29000 sents, 133297 tokens, 0.0% replaced (by <unk>)
+[de] Dictionary: 9760 types
+[de] data/consqa-m30k-en2de/train.de: 29000 sents, 429382 tokens, 0.0% replaced (by <unk>)
+[de] Dictionary: 9760 types
+[de] data/consqa-m30k-en2de/valid.de: 1014 sents, 15516 tokens, 0.0129% replaced (by <unk>)
+[de] Dictionary: 9760 types
+[de] data/consqa-m30k-en2de/test.2016.de: 1000 sents, 14447 tokens, 0.0% replaced (by <unk>)
+[de] Dictionary: 9760 types
+[de] data/consqa-m30k-en2de/test.2017.de: 1000 sents, 13426 tokens, 0.0149% replaced (by <unk>)
+[de] Dictionary: 9760 types
+[de] data/consqa-m30k-en2de/test.coco.de: 461 sents, 6419 tokens, 0.0156% replaced (by <unk>)
+[de] Dictionary: 9760 types
+[de] data/consqa-m30k-en2de/test.2018.de: 1071 sents, 16768 tokens, 0.0179% replaced (by <unk>)
+Wrote preprocessed data to data-bin/multi30k.en-de.consqa_mmt
+Namespace(aim_repo=None, aim_run_hash=None, align_suffix=None, alignfile=None, all_gather_list_size=16384, amp=False, amp_batch_retries=2, amp_init_scale=128, amp_scale_window=None, ans=None, azureml_logging=False, bf16=False, bpe=None, cpu=False, criterion='cross_entropy', dataset_impl='mmap', destdir='data-bin/multi30k.en-de.consqa_mmt', dict_only=False, empty_cache_freq=0, fp16=False, fp16_init_scale=128, fp16_no_flatten_grads=False, fp16_scale_tolerance=0.0, fp16_scale_window=None, joined_dictionary=True, log_file=None, log_format=None, log_interval=100, lr_scheduler='fixed', memory_efficient_bf16=False, memory_efficient_fp16=False, min_loss_scale=0.0001, model_parallel_size=1, no_progress_bar=False, nwordssrc=-1, nwordstgt=-1, on_cpu_convert_precision=False, only_source=False, optimizer=None, padding_factor=8, plasma_path='/tmp/plasma', profile=False, quantization_config_path=None, query=None, reset_logging=False, scoring='bleu', seed=1, source_lang='en', srcans='data/consqa-m30k-en2fr/train_en', srcdict=None, srcgptans='data/consqa-m30k-en2fr/gpt_train_en', srcgptquery='data/consqa-m30k-en2fr/gpt_train_en', srcquery='data/consqa-m30k-en2fr/train_en', suppress_crashes=False, target_lang='fr', task='consqa_mmt', tensorboard_logdir=None, testpref='data/consqa-m30k-en2fr/test.2016,data/consqa-m30k-en2fr/test.2017,data/consqa-m30k-en2fr/test.coco,data/consqa-m30k-en2fr/test.2018', tgtans='data/consqa-m30k-en2fr/train_fr', tgtdict=None, tgtquery='data/consqa-m30k-en2fr/train_fr', threshold_loss_scale=None, thresholdsrc=0, thresholdtgt=0, tokenizer=None, tpu=False, trainpref='data/consqa-m30k-en2fr/train', use_plasma_view=False, user_dir=None, validpref='data/consqa-m30k-en2fr/valid', wandb_project=None, workers=4)
+Namespace(aim_repo=None, aim_run_hash=None, align_suffix=None, alignfile=None, all_gather_list_size=16384, amp=False, amp_batch_retries=2, amp_init_scale=128, amp_scale_window=None, ans=None, azureml_logging=False, bf16=False, bpe=None, cpu=False, criterion='cross_entropy', dataset_impl='mmap', destdir='data-bin/multi30k.en-de.consqa_mmt', dict_only=False, empty_cache_freq=0, fp16=False, fp16_init_scale=128, fp16_no_flatten_grads=False, fp16_scale_tolerance=0.0, fp16_scale_window=None, joined_dictionary=True, log_file=None, log_format=None, log_interval=100, lr_scheduler='fixed', memory_efficient_bf16=False, memory_efficient_fp16=False, min_loss_scale=0.0001, model_parallel_size=1, no_progress_bar=False, nwordssrc=-1, nwordstgt=-1, on_cpu_convert_precision=False, only_source=False, optimizer=None, padding_factor=8, plasma_path='/tmp/plasma', profile=False, quantization_config_path=None, query=None, reset_logging=False, scoring='bleu', seed=1, source_lang='en', srcans='data/consqa-m30k-en2fr/train_en', srcdict=None, srcgptans='data/consqa-m30k-en2fr/gpt_train_en', srcgptquery='data/consqa-m30k-en2fr/gpt_train_en', srcquery='data/consqa-m30k-en2fr/train_en', suppress_crashes=False, target_lang='fr', task='consqa_mmt', tensorboard_logdir=None, testpref='data/consqa-m30k-en2fr/test.2016,data/consqa-m30k-en2fr/test.2017,data/consqa-m30k-en2fr/test.coco,data/consqa-m30k-en2fr/test.2018', tgtans='data/consqa-m30k-en2fr/train_fr', tgtdict=None, tgtquery='data/consqa-m30k-en2fr/train_fr', threshold_loss_scale=None, thresholdsrc=0, thresholdtgt=0, tokenizer=None, tpu=False, trainpref='data/consqa-m30k-en2fr/train', use_plasma_view=False, user_dir=None, validpref='data/consqa-m30k-en2fr/valid', wandb_project=None, workers=4)

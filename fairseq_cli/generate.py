@@ -80,7 +80,7 @@ def _main(cfg: DictConfig, output_file):
     use_cuda = torch.cuda.is_available() and not cfg.common.cpu
 
     # Load dataset splits
-    # print("------------------cfg.task: ",cfg.task)
+    print("------------------cfg.task: ",cfg.task)
     task = tasks.setup_task(cfg.task)
 
     # Set dictionaries
@@ -126,7 +126,6 @@ def _main(cfg: DictConfig, output_file):
 
     # Optimize ensemble for generation
     for model in chain(models, lms):
-        # print('!!!!!!!!!!!!!!!!models={}'.format(model))
         if model is None:
             continue
         if cfg.common.fp16:
@@ -166,11 +165,10 @@ def _main(cfg: DictConfig, output_file):
     gen_timer = StopwatchMeter()
 
     extra_gen_cls_kwargs = {"lm_model": lms[0], "lm_weight": cfg.generation.lm_weight}
-    # print('task=',task)
     generator = task.build_generator(
         models, cfg.generation, extra_gen_cls_kwargs=extra_gen_cls_kwargs
     )
-    # print('!!!!!!!!!generator={}'.format(generator))
+
     # Handle tokenization and BPE
     tokenizer = task.build_tokenizer(cfg.tokenizer)
     bpe = task.build_bpe(cfg.bpe)
@@ -210,7 +208,6 @@ def _main(cfg: DictConfig, output_file):
             prefix_tokens=prefix_tokens,
             constraints=constraints,
         )
-        # print('hypos', hypos)
         num_generated_tokens = sum(len(h[0]["tokens"]) for h in hypos)
         gen_timer.stop(num_generated_tokens)
 

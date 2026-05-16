@@ -196,7 +196,6 @@ def _make_all(lang, vocab, args):
     if args.testpref:
         for k, testpref in enumerate(args.testpref.split(",")):
             outprefix = "test{}".format(k) if k > 0 else "test"
-            # outprefix = args.testpref[-7:]
             _make_dataset(
                 vocab, testpref, outprefix, lang, args=args, num_workers=args.workers
             )
@@ -409,12 +408,12 @@ def main(args):
         _make_binary_dataset(src_dict, input_prefix=args.tgtans, output_prefix='train_de', lang='ans',
                              num_workers=args.workers, args=args)
 
-    if args.task == "consqa_mmt" and args.trainpref is not None:#train_en
+    if args.task == "consqa_mmt":#train_en
         _make_binary_dataset(src_dict, input_prefix=args.srcquery, output_prefix='train_en', lang='query', num_workers=args.workers, args=args)
         _make_binary_dataset(src_dict, input_prefix=args.srcans, output_prefix='train_en', lang='ans', num_workers=args.workers, args=args)
-        _make_binary_dataset(src_dict, input_prefix=args.tgtquery, output_prefix='train_cs', lang='query',
+        _make_binary_dataset(src_dict, input_prefix=args.tgtquery, output_prefix='train_fr', lang='query',
                              num_workers=args.workers, args=args)
-        _make_binary_dataset(src_dict, input_prefix=args.tgtans, output_prefix='train_cs', lang='ans',
+        _make_binary_dataset(src_dict, input_prefix=args.tgtans, output_prefix='train_fr', lang='ans',
                              num_workers=args.workers, args=args)
         _make_binary_dataset(src_dict, input_prefix=args.srcgptquery, output_prefix='gpt_train_en', lang='query',
                              num_workers=args.workers, args=args)
@@ -433,7 +432,6 @@ def main(args):
             _make_binary_dataset(src_dict, input_prefix=args.prevalidpref, output_prefix='pre_val',
                                  lang=args.target_lang,
                                  num_workers=args.workers, args=args)
-
     if target:
         _make_all(args.target_lang, tgt_dict, args)
 
