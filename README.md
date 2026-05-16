@@ -2,6 +2,8 @@
 
 Multimodal Machine Translation with Question Enhancement and Answer Consistency Constraint (基于问题增强和回答能力一致性约束的多模态机器翻译)
 
+This is the official code repository for the paper: [Findings of ACL 2025](https://aclanthology.org/2025.findings-acl.483/)
+
 ## 项目结构
 
 ```
