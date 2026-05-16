@@ -1,9 +1,11 @@
-# 基于问题增强和回答能力一致性约束的多模态机器翻译
+# ConsQA-MMT
+
+Multimodal Machine Translation with Question Enhancement and Answer Consistency Constraint (基于问题增强和回答能力一致性约束的多模态机器翻译)
 
 ## 项目结构
 
 ```
-MMT-VQA-main/
+ConsQA-MMT/
 ├── fairseq/                    # 修改版 FairSeq 框架
 │   ├── criterions/             # 损失函数（含 consqa_mmt 一致性损失）
 │   ├── data/                   # 数据集定义（含多模态数据加载）
@@ -59,7 +61,7 @@ pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
 pip install transformers sacrebleu omegaconf hydra-core numpy pillow tqdm
 
 # 4. 安装 fairseq（editable 模式，跳过 C 扩展）
-cd MMT-VQA-main
+cd ConsQA-MMT
 READTHEDOCS=1 pip install -e . --no-deps --no-build-isolation
 ```
 
